@@ -17,6 +17,10 @@ allButtons.addEventListener("click",  (event)=>{
 function whichButtonClicked(buttonValue){
 
     switch(buttonValue){
+        case '=':
+            var equation = calculatObj.clickedButton;
+            alert(eval(equation));
+            break;
         case 'AC':
           calculatObj.clickedButton = "";
           calculatObj.result = ""; 
