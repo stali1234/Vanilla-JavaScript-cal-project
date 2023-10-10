@@ -1,4 +1,5 @@
 var allButtons = document.getElementById("all-buttons");
+var calculatObj = {clickedButton:"",result:""};
 allButtons.addEventListener("click",  (event)=>{
     
     const isbutton = event.target.nodeName  === "BUTTON";
@@ -8,5 +9,25 @@ allButtons.addEventListener("click",  (event)=>{
     }
     // if its a button then
     // value of button
-    alert(event.target.value);
+    var buttonValue = event.target.value;
+    whichButtonClicked(buttonValue);
+    
 });
+
+function whichButtonClicked(buttonValue){
+
+    switch(buttonValue){
+        case 'AC':
+          calculatObj.clickedButton = "";
+          calculatObj.result = ""; 
+          alert(calculatObj.result)   
+          break;
+ 
+        default: 
+            calculatObj.clickedButton = calculatObj.clickedButton + buttonValue;
+            alert(calculatObj.clickedButton);
+            break;
+
+                 
+    }
+}
