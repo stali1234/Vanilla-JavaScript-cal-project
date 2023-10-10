@@ -17,7 +17,22 @@
     font-size: 1.5rem;
 }
 
+.calculator-button:hover{
+    background-color: gray;
+}
+
 .calculator-button {
     width: 80px;
     margin: 1rem !important;
+}
+
+.calculator-operation-button{
+    width: 50px;
+    margin:15px;
+}
+
+.equals-button{
+    width: 95%;
+    margin: 5px;
+
 }
