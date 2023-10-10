@@ -1,4 +1,5 @@
 var allButtons = document.getElementById("all-buttons");
+var screent = document.getElementById("screen");
 var calculatObj = {clickedButton:"",result:""};
 allButtons.addEventListener("click",  (event)=>{
     
@@ -10,6 +11,7 @@ allButtons.addEventListener("click",  (event)=>{
     // if its a button then
     // value of button
     var buttonValue = event.target.value;
+
     whichButtonClicked(buttonValue);
     
 });
@@ -19,17 +21,17 @@ function whichButtonClicked(buttonValue){
     switch(buttonValue){
         case '=':
             var equation = calculatObj.clickedButton;
-            alert(eval(equation));
+            screent.value = eval(equation);
             break;
         case 'AC':
           calculatObj.clickedButton = "";
           calculatObj.result = ""; 
-          alert(calculatObj.result)   
+          screent.value = calculatObj.result;  
           break;
  
         default: 
             calculatObj.clickedButton = calculatObj.clickedButton + buttonValue;
-            alert(calculatObj.clickedButton);
+            screent.value = calculatObj.clickedButton
             break;
 
                  
