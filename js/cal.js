@@ -20,8 +20,11 @@ function whichButtonClicked(buttonValue){
 
     switch(buttonValue){
         case '=':
-            var equation = calculatObj.clickedButton;
-            screent.value = eval(equation);
+            var equation = calculatObj.result+ calculatObj.clickedButton;
+            calculatObj.result = eval(equation);
+            calculatObj.clickedButton = "";
+            screent.value = calculatObj.result.toFixed(2);
+
             break;
         case 'AC':
           calculatObj.clickedButton = "";
